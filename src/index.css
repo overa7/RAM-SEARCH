@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Aptos", "Aptos Display", "Avenir", "Avenir Next", "Figtree", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "Chivo Mono", monospace;
+  --font-display: "Aptos", "Avenir", "Outfit", "Figtree", system-ui, sans-serif;
+}
+
+:root {
+  /* The 5-Colorway Palette from Image */
+  --ram-yellow: #FFBA08;
+  --ram-yellow-hover: #E5A700;
+  --ram-cream: #FFF8D6;
+  --ram-cream-light: #FFFDEE;
+  --ram-charcoal: #161B26;
+  --ram-charcoal-light: #1E2330;
+  --ram-slate: #6E7380;
+  --ram-slate-light: #9499A5;
+  --ram-silver: #CFD3D8;
+  --ram-silver-light: #E2E5E9;
+  --ram-bg: #F0F2F5;
+  
+  /* UX System Surfaces */
+  --ram-surface: #FFFFFF;
+  --ram-panel: #FFFFFF;
+  --ram-border: #E2E5E9;
+  --ram-border-subtle: #EDF0F3;
+  --ram-green: #10B981;
+  --ram-red: #EF4444;
+}
+
+body {
+  background-color: var(--ram-bg);
+  color: var(--ram-charcoal);
+  font-family: var(--font-sans);
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle Modern Perforation Effect */
+.ram-grille {
+  background-image: radial-gradient(rgba(22, 27, 38, 0.08) 1.2px, transparent 1.2px);
+  background-size: 8px 8px;
+}
+
+.ram-grille-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+  background-size: 8px 8px;
+}
+
+/* Clean UX Card & Chassis */
+.ram-chassis {
+  background: #FFFFFF;
+  border: 1px solid var(--ram-border);
+  box-shadow: 0 1px 3px rgba(22, 27, 38, 0.03), 0 4px 16px -2px rgba(22, 27, 38, 0.04);
+}
+
+.ram-panel {
+  background: #FFFFFF;
+  border: 1px solid var(--ram-border);
+  box-shadow: 0 1px 2px rgba(22, 27, 38, 0.02);
+}
+
+.ram-recessed {
+  background: #F4F6F8;
+  border: 1px solid var(--ram-border);
+}
+
+.ram-recessed-dark {
+  background: #11141D;
+  border: 1px solid #232836;
+}
+
+/* Tactile Push-Button */
+.ram-btn {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px rgba(22, 27, 38, 0.04);
+}
+
+.ram-btn:hover {
+  transform: translateY(-0.5px);
+  box-shadow: 0 2px 4px rgba(22, 27, 38, 0.08);
+}
+
+.ram-btn:active {
+  transform: translateY(0.5px);
+  box-shadow: inset 0 1px 2px rgba(22, 27, 38, 0.1);
+}
+
+/* The Iconic Golden Amber Button (Colorway 1 + Black Dot) */
+.ram-btn-accent {
+  background: #FFBA08;
+  color: #161B26;
+  border: 1px solid #E5A700;
+  font-weight: 700;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(255, 186, 8, 0.3), 0 1px 2px rgba(22, 27, 38, 0.05);
+}
+
+.ram-btn-accent:hover {
+  background: #FFC224;
+  box-shadow: 0 4px 10px rgba(255, 186, 8, 0.4);
+}
+
+.ram-btn-accent:active {
+  background: #E5A700;
+  box-shadow: inset 0 1px 3px rgba(22, 27, 38, 0.2);
+}
+
+/* Legacy Alias for easy compatibility */
+.ram-btn-orange {
+  background: #FFBA08;
+  color: #161B26;
+  border: 1px solid #E5A700;
+  font-weight: 700;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(255, 186, 8, 0.25);
+}
+
+.ram-btn-orange:hover {
+  background: #FFC224;
+  box-shadow: 0 4px 10px rgba(255, 186, 8, 0.35);
+}
+
+.ram-btn-orange:active {
+  background: #E5A700;
+}
+
+/* Cream Accent Badge / Card */
+.ram-cream-pill {
+  background: var(--ram-cream);
+  color: #161B26;
+  border: 1px solid #EADB9F;
+}
+
+/* Telemetry Labels */
+.ram-label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  color: var(--ram-slate);
+}
+
+.ram-label-dark {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  color: #8D93A1;
+}
+
+/* Precision Caliber Tick Marks */
+.ram-ticks {
+  background-image: linear-gradient(to right, #CFD3D8 1px, transparent 1px);
+  background-size: 8px 100%;
+}

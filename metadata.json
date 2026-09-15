@@ -1,0 +1,8 @@
+{
+  "name": "RAM SEARCH",
+  "description": "Sistema de inteligencia de búsqueda, análisis de intención de mercado y motor de compra de medios SEM en Ecuador y mercados globales.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
